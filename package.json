@@ -1,0 +1,16 @@
+{
+  "name": "hi-u-ng-chu-t",
+  "version": "1.0.0",
+  "description": "Lần đầu làm tiện ích :33",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node script.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "start": "^5.1.0"
+  }
+}
