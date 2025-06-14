@@ -16,8 +16,8 @@
   ],
   
   "icons": {
-    "16": "icon16.png",
-    "32": "icons/icon32.png",
+    "16": "Ảnh chụp màn hình 2025-06-14 080420.png",
+    "32": "Ảnh chụp màn hình 2025-06-14 080420.png",
     "48": "Ảnh chụp màn hình 2025-06-14 080420.png",
     "128": "Ảnh chụp màn hình 2025-06-14 080420.png"
   },
@@ -26,8 +26,8 @@
     "default_popup": "popup.html",
     "default_title": "Mouse Follower",
     "default_icon": {
-      "16": "icon16.png",
-      "32": "icons/icon32.png",
+      "16": "Ảnh chụp màn hình 2025-06-14 080420.png",
+      "32": "Ảnh chụp màn hình 2025-06-14 080420.png",
       "48": "Ảnh chụp màn hình 2025-06-14 080420.png",
       "128": "Ảnh chụp màn hình 2025-06-14 080420.png"
     }
