@@ -1,0 +1,82 @@
+/* Mouse Follower Content Styles */
+#mouse-follower-image {
+    /* Ensure the follower image is always on top */
+    z-index: 2147483647 !important;
+    
+    /* Smooth animations */
+    transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    
+    /* Prevent text selection */
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    
+    /* Ensure it doesn't interfere with page interactions */
+    pointer-events: none !important;
+    
+    /* Smooth scaling animation on hover areas */
+    transform-origin: center center !important;
+}
+
+/* Animation for when the follower appears */
+#mouse-follower-image.appearing {
+    animation: follower-appear 0.3s ease-out forwards !important;
+}
+
+/* Animation for when the follower disappears */
+#mouse-follower-image.disappearing {
+    animation: follower-disappear 0.3s ease-in forwards !important;
+}
+
+@keyframes follower-appear {
+    0% {
+        opacity: 0 !important;
+        transform: translate(-50%, -50%) scale(0) !important;
+    }
+    100% {
+        opacity: var(--follower-opacity, 0.8) !important;
+        transform: translate(-50%, -50%) scale(1) !important;
+    }
+}
+
+@keyframes follower-disappear {
+    0% {
+        opacity: var(--follower-opacity, 0.8) !important;
+        transform: translate(-50%, -50%) scale(1) !important;
+    }
+    100% {
+        opacity: 0 !important;
+        transform: translate(-50%, -50%) scale(0) !important;
+    }
+}
+
+/* Hover effects for interactive elements */
+body:hover #mouse-follower-image {
+    filter: drop-shadow(0 4px 20px rgba(0,0,0,0.4)) !important;
+}
+
+/* Special effects for different cursor states */
+a:hover ~ #mouse-follower-image,
+button:hover ~ #mouse-follower-image,
+input:hover ~ #mouse-follower-image,
+textarea:hover ~ #mouse-follower-image,
+select:hover ~ #mouse-follower-image {
+    transform: translate(-50%, -50%) scale(1.1) !important;
+    filter: drop-shadow(0 6px 25px rgba(0,0,0,0.5)) brightness(1.1) !important;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    #mouse-follower-image {
+        width: calc(var(--follower-size, 50px) * 0.8) !important;
+        height: calc(var(--follower-size, 50px) * 0.8) !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #mouse-follower-image {
+        transition: none !important;
+        animation: none !important;
+    }
+}
